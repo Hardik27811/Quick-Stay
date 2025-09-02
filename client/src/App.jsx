@@ -11,6 +11,8 @@ import Layout from './pages/hotelOwner/Layout'
 import Dashboard from './pages/hotelOwner/Dashboard'
 import Addroom from './pages/hotelOwner/Addroom'
 import ListRoom from './pages/hotelOwner/ListRoom'
+import Experience from './pages/Experience'
+import About from './pages/About'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -27,13 +29,14 @@ function App() {
               <Route path='/rooms' element={<AllRooms/>}/>
               <Route path='/rooms/:id' element={<RoomDetails/>}/>
               <Route path='/my-bookings' element={<MyBookings/>}/>
+              <Route path='/experience' element={<Experience/>}/>
+              <Route path='/about' element={<About/>}/>
               <Route path='/owner' element={<Layout/>}>
                 <Route index element={<Dashboard/>} />
                 <Route path='add-room' element={<Addroom/>} />
                 <Route path='list-room' element={<ListRoom/>} />
-
-
               </Route>
+
             </Routes>
          </div>
         <Footer/>
